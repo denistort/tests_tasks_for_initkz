@@ -1,0 +1,11 @@
+:root {
+	--main-bg-color: #0e1621;
+	--not-from-you-message-bg: #182533;
+	--your-message-bg: #2b5278;
+	--bg-input: #17212b;
+	--text-color-white: #ebf1f6;
+	--icons-color: #5e6a75;
+	--button-click-active: #5e6a755e;
+	--container-max-width: 700px;
+	--modal-file-upload: #0000008e;
+}

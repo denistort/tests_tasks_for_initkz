@@ -1,0 +1,38 @@
+.message-wrapper {
+	display: flex;
+}
+.from-you {
+	justify-content: flex-end;
+}
+.not-from-you {
+	justify-content: flex-start;
+}
+.from-you-body {
+	background-color: var(--your-message-bg);
+	border-radius: 4px;
+	padding: .6rem;
+	font-size: 14px;
+	color: var(--text-color-white);
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	flex-direction: column;
+}
+
+.not-from-you-body {
+	background-color: var(--not-from-you-message-bg);
+	border-radius: 4px;
+	padding: .6rem;
+	font-size: 14px;
+	color: var(--text-color-white);
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	flex-direction: column;
+}
+
+.time {
+	color: var(--icons-color);
+	font-weight: 500;
+	font-size: 11px;
+}

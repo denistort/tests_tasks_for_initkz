@@ -1,0 +1,54 @@
+.text-fild-wrapper {
+	max-width: var(--container-max-width);
+	min-height: 47px;
+	background-color: var(--bg-input);
+	border: 1px solid rgb(34, 34, 34);
+	display: inline-flex;
+	align-items: center;
+}
+.input {
+	display: flex;
+	max-width: var(--container-max-width);
+	width: 100%;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	font-size: 16px;
+	letter-spacing: 0.2px;
+	font-weight: 300;
+	word-break: break-all;
+	color: var(--text-color-white);
+	text-align: left;
+	cursor: text;
+}
+
+.input::placeholder {
+	color: var(--icons-color);
+}
+
+.button {
+	display: flex;
+	background-color: transparent;
+	padding: 0.7rem;
+	cursor: pointer;
+	border-radius: 50%;
+	border: none;
+	transition: 0.5s ease;
+}
+.button:active {
+	background-color: var(--button-click-active);
+}
+
+.button:hover .button svg {
+	fill: var(--your-message-bg)
+}
+.button:disabled {
+	opacity: 0.3;
+	cursor: not-allowed;
+	user-select: none;
+}
+
+[data-placeholder]:empty:before{
+  content: attr(data-placeholder);
+  color: var(--icons-color);
+}

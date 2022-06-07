@@ -1,0 +1,14 @@
+.header {
+	min-height: 47px;
+	background-color: var(--bg-input);
+	border: 1px solid rgb(34, 34, 34);
+	color: var(--text-color-white);
+	display: flex;
+	justify-content: space-between;
+	padding: 0 1rem;
+}
+
+.header h1 {
+	font-size: 16px;
+	font-weight: 500;
+}

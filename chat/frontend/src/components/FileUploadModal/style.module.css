@@ -1,0 +1,23 @@
+.modal {
+	background-color: var(--modal-file-upload);
+	position: absolute;
+	width: 100%;
+	/* height: calc(100% - 47px); */
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.bottom-buttons {
+	display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	border-radius: 50%;
+}

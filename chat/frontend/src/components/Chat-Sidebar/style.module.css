@@ -1,0 +1,6 @@
+.sidebar {
+	width: 100%;
+	background-color: var(--bg-input);
+	max-width: 300px;
+	border: 1px solid rgb(34, 34, 34)
+}
