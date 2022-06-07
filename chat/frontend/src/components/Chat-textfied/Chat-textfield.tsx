@@ -42,13 +42,6 @@ const ChatTextField: FC<ChatTextFieldProps> = ({ toggleModal, socketSend }) => {
 		text.current = '';
 		setInputValue(text.current)
 	}
-	const handleClickBody = () => {
-		const input = document.getElementById('input')
-		console.log(input)
-		if (input) {
-			input.focus()
-		}
-	}
 
 	return (
 		<div className={style['text-fild-wrapper']}>

@@ -16,7 +16,6 @@ const FileUploadModal: FC<FileUploadModalProps> = ({ toggleModal, socketSend }) 
 
 	const handleChange = (file: FileList) => {
 		setFile(file);
-		console.log(file);
 	};
 	const handleClickClear = () => {
 		setFile(null);

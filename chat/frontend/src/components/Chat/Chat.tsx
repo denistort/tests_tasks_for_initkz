@@ -1,16 +1,13 @@
-import { FC, useState, useRef, useEffect, createContext } from 'react';
+import { FC, useState, useRef, createContext } from 'react';
 import ChatTextfied from '../Chat-textfied';
 import Messages from '../Messages';
 import style from './style.module.css';
-import { data } from './data';
-import Message from '../Message';
 import FileUploadModal from '../FileUploadModal';
 import ChatHeader from '../Chat-header';
 import ChatSidebar from '../Chat-Sidebar';
 import Auth from '../Auth';
 import { ImageMessage, MessageType } from './types';
 import MessageHoc from '../Message';
-import ImageMsg from '../Message/Image-message';
 
 interface ChatProps {
 
@@ -24,7 +21,6 @@ const Chat: FC<ChatProps> = () => {
 	const [openModal, setOpenModal] = useState(false);
 	const [messages, setMessages] = useState<Array<ImageMessage | MessageType>>([])
 	const socket = useRef() as React.MutableRefObject<WebSocket>;
-	// const socket = useRef() as React.MutableRefObject<Socket>;
 
 	const socketSend = (message: ImageMessage | Omit<MessageType, 'uuid'>) => {
 		return socket.current.send(JSON.stringify(message))

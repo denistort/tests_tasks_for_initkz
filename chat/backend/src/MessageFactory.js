@@ -6,9 +6,6 @@ function MessageFactory({ socket, wsServer }) {
 		handleMessage
 	})
 	function broadCastMessageForAll(message, func) {
-		// wsServer.clients.forEach(client => { 
-		// 	client.send(JSON.stringify(message), isBinary) 
-		// })
 		func(message)
 	}
 
@@ -24,18 +21,14 @@ function MessageFactory({ socket, wsServer }) {
 				broadCastMessageForAll(message, func)
 				break;
 			case MessageTypes.Image:
-				console.log(message)
 				broadCastMessageForAll(message, func)
 				break;
 			case MessageTypes.Connection:
-				console.log({ ...message, uuid: socket.userId })
 				socketSend({ ...message, uuid: socket.userId })
 				break;
 			case MessageTypes.Disconnect:
-				// console.log(message)
 				break;
 			default:
-				// console.log(message)
 				break;
 		}
 	}

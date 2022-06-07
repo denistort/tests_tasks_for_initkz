@@ -11,12 +11,9 @@ const webSocketServer = new ws.Server({
 
 webSocketServer.on('connection', (socket) => {
 	socket.userId = uuidv4()
-	// socket.binaryType = 'arraybuffer';
-
 	const messageFactory = MessageFactory({ socket, webSocketServer });
 	socket.on('message', (message) => {
-		// socket.send(message)
-		// console.log(isBinary)
+
 		messageFactory.handleMessage(message, broadCastMessage);
 	})
 	socket.on('close', () => { console.log() })

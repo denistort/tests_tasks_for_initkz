@@ -6,8 +6,6 @@ import { UserContext } from '../Chat/Chat';
 
 const ImageMsg: FC<ImageMessage> =
 	({ fileArrayBuffer, fileName, mimeType, date, authorName, authorUuid }) => {
-		// const blob = new Blob(fileArrayBuffer, { type: mimeType })
-		// URL.createObjectURL(blob)
 		const { uuid } = useContext(UserContext);
 		if (uuid === authorUuid) {
 			return (
